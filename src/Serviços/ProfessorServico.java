@@ -1,9 +1,6 @@
 package Serviços;
 
 import Repositorios.RepositorioProfessor;
-
-import java.util.List;
-
 import Entidades.Professor;
 
 public class ProfessorServico {
@@ -18,8 +15,9 @@ public class ProfessorServico {
         repositorio.adicionar(new Professor(id, nome, disciplina, salario));
     }
 
-    public List<Professor> listar() {
-        return repositorio.listar();
+    public void listar() {
+        System.out.println("Lista de Professores:" );
+        repositorio.listar();
     }
 
     public void atualizar(int id, Professor novoProfessor) { 
@@ -31,7 +29,6 @@ public class ProfessorServico {
     }
     
     private int gerarId() {
-        
-        return repositorio.listar().size() + 1; 
+        return repositorio.getTamanho() + 1; 
     }
 }

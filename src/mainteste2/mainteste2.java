@@ -138,12 +138,8 @@ public class mainteste2 {
     	}
   
     private static void listarProfessores(Serviços.ProfessorServico servico) {
-        System.out.println("\nLista de Professores:");
-        List<Professor> listaProfessores = servico.listar();
         
-        for (Professor p : listaProfessores) {
-            System.out.println(p);
-        }
+        servico.listar();
     }
 
     private static void atualizarProfessor(Serviços.ProfessorServico servico, Scanner scanner, ServicoNotificacoes servicoNotificacoes) {
